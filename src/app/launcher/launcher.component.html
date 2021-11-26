@@ -1,4 +1,5 @@
 <div class="container-fluid">
+    <!-- Icons from https://fontawesome.com/ -->
     <div class="row gx-5">
         <div class="px-4 p-2 gx-5 col-3 border bg-light">
                   <h5 class="card-title">Lars Kristian Roland <i class="fas fa-edit"></i></h5>
@@ -27,7 +28,7 @@
                     <option value="1">Poliklinisk notat</option>
                     <option value="2">Vanlig konsultasjon</option>
                     <option value="3">Hjemmesykepleie</option>
-                    <option value="3">Betaling</option>
+                    <option value="3">Hjemmesykepleie</option>
                 </select>
                 <button class="btn btn-outline-secondary btn-sm form-control-sm" type="button" id="button-addon2">Legg til</button>
             </div>
@@ -80,7 +81,7 @@
                 </nav>
             </div>
 
-            <div>
+            <div class="p-10">
                 <iframe [hidden]="!showWindowOne" [src]="appUrl1 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                 <iframe [hidden]="!showWindowTwo" [src]="appUrl2 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                 <iframe [hidden]="!showWindowThree" [src]="appUrl3 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
@@ -136,6 +137,13 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Lagre</button>
             </form>
+        </div>
+    </div>
+    <div class="row gx-5">
+        <div class="col-12 border bg-light">
+            <div class="alert alert-warning" role="alert">
+                This is not a real EHR. It's just used for demo purposes. 
+              </div>            
         </div>
     </div>
 </div>
