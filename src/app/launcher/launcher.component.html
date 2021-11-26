@@ -1,0 +1,141 @@
+<div class="container-fluid">
+    <div class="row gx-5">
+        <div class="px-4 p-2 gx-5 col-3 border bg-light">
+                  <h5 class="card-title">Lars Kristian Roland <i class="fas fa-edit"></i></h5>
+                  <h6 class="card-text"><i class="fas fa-sm fa-birthday-cake"></i> 02/03/73</h6>
+                  <h6 class="card-text"><i class="fas fa-sm fa-house-user"></i> Nordengveien 85F, 0755 Oslo <i class="fas fa-sm fa-phone-square"></i> 90733036</h6>
+                  <span class="badge rounded-pill bg-danger">Kritisk info: Cave Penicilin</span>
+        </div>
+        <div class="p-2 col-3 border bg-light">
+                    <h5 class="card-title">Tjenester og tiltak</h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><a href="">Digital hjemmeoppfølging</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted"><a href="">Hjemmesykepleie</a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted"><a href="">Legg til ny tjeneste</a></h6>
+        </div>
+        <div class="p-2 col-3 border bg-light">
+            <h5 class="card-title">Aktivitet</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><b><a href="">21/11/2021: Melding fra pasient</a></b></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><a href="">17/11/2021: Endring legemidler</a></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><a href="">17/11/2021: Epikrise</a></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><a href="">11/11/2021: Henvisning</a></h6>          
+        </div>        
+        <div class="p-2 col-3 border bg-light">
+            <h5 class="card-title">Konsultasjon</h5>
+            <div class="col-sm-10 input-group mb-3 form-control-sm">
+                <select class="form-select form-control-sm" aria-label="Default select example">
+                    <option selected>Velg funksjon</option>
+                    <option value="1">Poliklinisk notat</option>
+                    <option value="2">Vanlig konsultasjon</option>
+                    <option value="3">Hjemmesykepleie</option>
+                    <option value="3">Betaling</option>
+                </select>
+                <button class="btn btn-outline-secondary btn-sm form-control-sm" type="button" id="button-addon2">Legg til</button>
+            </div>
+            <a href="#" class="card-link">Avslutt konsultasjon</a>
+        </div>
+    </div>
+    <div class="row gx-5">
+        <div class="col-9 border bg-light">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <!--
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Applikasjon
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="">En app</a></li>
+                                <li><a class="dropdown-item" href="">En annen app</a></li>
+                                <li><a class="dropdown-item" href="">En tredje app</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="nav-item">
+                                &nbsp;
+                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startThirdApp()">Oversikt</button>&nbsp;
+                                <button type="button" class="btn btn-outline-primary btn-sm">Sak</button>&nbsp;   
+                                <button type="button" class="btn btn-outline-primary btn-sm">Journal</button>&nbsp;   
+                                <button type="button" class="btn btn-outline-primary btn-sm">Diagnoser</button>&nbsp; 
+                                <button type="button" class="btn btn-outline-primary btn-sm">Tiltak</button>&nbsp;   
+                                <button type="button" class="btn btn-outline-danger btn-sm">Kjernejournal</button>&nbsp;   
+                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startSecondApp()">Legemidler</button>&nbsp;
+                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startFirstApp()">Labsvar</button>&nbsp;
+                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startFourthApp()">Henvisning</button>&nbsp;  
+                                <button type="button" class="btn btn-outline-primary btn-sm">Rekvisisjon</button>&nbsp;  
+                                <button type="button" class="btn btn-outline-primary btn-sm">Timebok</button>&nbsp;                      
+                            </li>       
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Velg skjema
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="">Et skjema</a></li>
+                                <li><a class="dropdown-item" href="">Et annet skjema</a></li>
+                                <li><a class="dropdown-item" href="">Et tredje skjema</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div>
+                <iframe [hidden]="!showWindowOne" [src]="appUrl1 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                <iframe [hidden]="!showWindowTwo" [src]="appUrl2 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                <iframe [hidden]="!showWindowThree" [src]="appUrl3 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                <iframe [hidden]="!showWindowFour" [src]="appUrl4 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+            </div>
+        </div>
+        <div class="p-3 gx-5 col-3 border bg-light">
+            <form>
+                <h3>Journalnotat</h3>
+
+                <label for="note" class="form-label">Blodtrykk</label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Systolisk" aria-label="Username">
+                    <span class="input-group-text">/</span>
+                    <input type="text" class="form-control" placeholder="Diastolisk" aria-label="Server">
+                </div>
+                <div class="mb-3">
+                    <label for="note" class="form-label">Journal for konsultasjon 26.11.2011</label>
+                    <textarea class="form-control" id="note" rows="7"></textarea>
+                </div>
+                <label for="note" class="form-label">Diagnose</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="A01,Smerte generell/flere steder,Smerte generell/flere steder"></option>
+                    <option value="A02,Frysninger,Frysninger"></option>
+                    <option value="A03,Feber,Feber"></option>
+                    <option value="A04,Slapphet/tretthet,Slapphet/tretthet"></option>
+                    <option value="A05,Sykdomsfølelse,Sykdomsfølelse"></option>
+                    <option value="A06,Besvimelse/synkope,Besvimelse/synkope"></option>
+                    <option value="A07,Bevisstløshet/koma,Bevisstløshet/koma"></option>
+                    <option value="A08,Hevelse/oppfylning IKA,Hevelse/oppfylning IKA"></option>
+                    <option value="A09,Svetteproblemer,Svetteproblemer"></option>
+                    <option value="A10,Blødning IKA,Blødning IKA"></option>
+                    <option value="A11,Brystsmerte IKA,Brystsmerte IKA"></option>
+                    <option value="A13,Engstelig for behandling,Engstelig for behandling"></option>
+                    <option value="A16,Irritabelt/urolig spedbarn,Irritabelt/urolig spedbarn"></option>
+                    <option value="A18,Bekymret/opptatt av utseende IKA,Bekymret/opptatt av utseende IKA"></option>
+                </datalist>
+                <!--<label for="note" class="form-label">Inkluder dokumenter</label>
+                <select class="form-select" multiple aria-label="multiple select example">
+                    <option value="1">Operasjonsbeskrivelse</option>
+                    <option value="2">Henvisning</option>
+                    <option value="3">Epikrise</option>
+                </select>-->
+                <label for="note" class="form-label">Videre oppfølging</label>
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example">
+                    <option value="0">Ingen</option>
+                    <option value="1">Fastlege</option>
+                    <option value="2">Ny time her</option>
+                    <option value="3">Henvisning</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Lagre</button>
+            </form>
+        </div>
+    </div>
+</div>
