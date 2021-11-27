@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenehrService } from '../openehr.service';
 
+import { Labdata } from '../../labdata';
+
 @Component({
   selector: 'app-lab',
   templateUrl: './lab.component.html',
@@ -9,8 +11,12 @@ import { OpenehrService } from '../openehr.service';
 export class LabComponent implements OnInit {
 
   constructor(private ehrService: OpenehrService) { }
-
-  labData = {};
+   
+  labData:Labdata = {
+    q: "",
+    columns: [{}],
+    rows: [] 
+  };
   ehr = {};
 
   ngOnInit(): void {
@@ -20,7 +26,7 @@ export class LabComponent implements OnInit {
     })
 
     this.ehrService.getLabData().subscribe((data: {}) => {
-      this.labData = data;
+      this.labData = <Labdata>data;
     })
   }
 
