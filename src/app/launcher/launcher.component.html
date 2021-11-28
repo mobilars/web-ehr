@@ -56,11 +56,11 @@
                                 &nbsp;
                                 <button type="button" class="btn btn-outline-primary btn-sm" (click)="startFirstApp()">Oversikt</button>&nbsp;
                                 <button type="button" class="btn btn-outline-primary btn-sm">Sak</button>&nbsp;   
-                                <button type="button" class="btn btn-outline-primary btn-sm">Journal</button>&nbsp;   
+                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startThirdApp()">Journal</button>&nbsp;
                                 <button type="button" class="btn btn-outline-primary btn-sm">Diagnoser</button>&nbsp; 
                                 <button type="button" class="btn btn-outline-primary btn-sm">Tiltak</button>&nbsp;   
                                 <button type="button" class="btn btn-outline-danger btn-sm">Kjernejournal</button>&nbsp;   
-                                <button type="button" class="btn btn-outline-primary btn-sm" (click)="startThirdApp()">Legemidler</button>&nbsp;
+                                <button type="button" class="btn btn-outline-primary btn-sm">Legemidler</button>&nbsp;   
                                 <button type="button" class="btn btn-outline-primary btn-sm" (click)="startSecondApp()">Labsvar</button>&nbsp;
                                 <button type="button" class="btn btn-outline-primary btn-sm" (click)="startFourthApp()">Henvisning</button>&nbsp;  
                                 <button type="button" class="btn btn-outline-primary btn-sm">Rekvisisjon</button>&nbsp;  
@@ -89,54 +89,7 @@
             </div>
         </div>
         <div class="p-3 gx-5 col-3 border bg-light">
-            <form>
-                <h3>Journalnotat</h3>
-
-                <label for="note" class="form-label">Blodtrykk</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Systolisk" aria-label="Username">
-                    <span class="input-group-text">/</span>
-                    <input type="text" class="form-control" placeholder="Diastolisk" aria-label="Server">
-                </div>
-                <div class="mb-3">
-                    <label for="note" class="form-label">Journal for konsultasjon 26.11.2011</label>
-                    <textarea class="form-control" id="note" rows="7"></textarea>
-                </div>
-                <label for="note" class="form-label">Diagnose</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                <datalist id="datalistOptions">
-                    <option value="A01,Smerte generell/flere steder,Smerte generell/flere steder"></option>
-                    <option value="A02,Frysninger,Frysninger"></option>
-                    <option value="A03,Feber,Feber"></option>
-                    <option value="A04,Slapphet/tretthet,Slapphet/tretthet"></option>
-                    <option value="A05,Sykdomsfølelse,Sykdomsfølelse"></option>
-                    <option value="A06,Besvimelse/synkope,Besvimelse/synkope"></option>
-                    <option value="A07,Bevisstløshet/koma,Bevisstløshet/koma"></option>
-                    <option value="A08,Hevelse/oppfylning IKA,Hevelse/oppfylning IKA"></option>
-                    <option value="A09,Svetteproblemer,Svetteproblemer"></option>
-                    <option value="A10,Blødning IKA,Blødning IKA"></option>
-                    <option value="A11,Brystsmerte IKA,Brystsmerte IKA"></option>
-                    <option value="A13,Engstelig for behandling,Engstelig for behandling"></option>
-                    <option value="A16,Irritabelt/urolig spedbarn,Irritabelt/urolig spedbarn"></option>
-                    <option value="A18,Bekymret/opptatt av utseende IKA,Bekymret/opptatt av utseende IKA"></option>
-                </datalist>
-                <!--<label for="note" class="form-label">Inkluder dokumenter</label>
-                <select class="form-select" multiple aria-label="multiple select example">
-                    <option value="1">Operasjonsbeskrivelse</option>
-                    <option value="2">Henvisning</option>
-                    <option value="3">Epikrise</option>
-                </select>-->
-                <label for="note" class="form-label">Videre oppfølging</label>
-                <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example">
-                    <option value="0">Ingen</option>
-                    <option value="1">Fastlege</option>
-                    <option value="2">Ny time her</option>
-                    <option value="3">Henvisning</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Lagre</button>
-            </form>
+            <app-consultation></app-consultation>
         </div>
     </div>
     <div class="row gx-5">

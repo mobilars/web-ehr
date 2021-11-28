@@ -9,6 +9,7 @@ import { LauncherComponent } from './launcher/launcher.component';
 import { SafePipe } from './safe.pipe';
 import { LabComponent } from './lab/lab.component';
 import { ConsultationComponent } from './consultation/consultation.component';
+import { JournalComponent } from './journal/journal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ConsultationComponent } from './consultation/consultation.component';
     LauncherComponent,
     SafePipe,
     LabComponent,
-    ConsultationComponent
+    ConsultationComponent,
+    JournalComponent
   ],
   imports: [
     BrowserModule,
