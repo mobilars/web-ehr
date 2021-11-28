@@ -12,9 +12,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class OpenehrService {
 
-  ehrId = "7f3d15cb-1504-4ab4-9767-cb908a477483";
+  ehrId = "7f9a8379-2b40-4fe8-bcc1-f0db0888efed";
   private ehrApiUrl = "http://localhost/ehrbase/rest/openehr/v1/ehr/";
   private aqlApiUrl = "http://localhost/lab/ehrbase/rest/openehr/v1/query/aql";
+  private postConsultationNoteUrl = "http://localhost/ehrbase/rest/ecis/v1/composition/?format=FLAT";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,14 +27,18 @@ export class OpenehrService {
   public getLabData() {
     var headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Basic '+btoa("user:secret") } );
     var postData = {
-      "q": "select c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/origin/value as date, c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/magnitude as systolic,   c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/events[at0006]/data[at0003]/items[at0005]/value/magnitude as diastolic from ehr e contains composition c [openEHR-EHR-COMPOSITION.encounter.v1] where e/ehr_id/value='7f3d15cb-1504-4ab4-9767-cb908a477483'"
+      "q": "select c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/origin/value as date, c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/events[at0006]/data[at0003]/items[at0004]/value/magnitude as systolic,   c/content[openEHR-EHR-OBSERVATION.blood_pressure.v2]/data[at0001]/events[at0006]/data[at0003]/items[at0005]/value/magnitude as diastolic from ehr e contains composition c [openEHR-EHR-COMPOSITION.encounter.v1] where e/ehr_id/value='"+this.ehrId+"'"
     };
     return this.httpClient.post(this.aqlApiUrl, postData, { headers: headers, withCredentials: true} );
   }
 
-  getHttpHeaders()
+  public postConsultationNote(postData:any)
   {
-
+    var templateId = "Encounter2";
+    var url = this.postConsultationNoteUrl+"&ehrId="+this.ehrId+"&templateId="+templateId;
+    var headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': 'Basic '+btoa("user:secret") } );
+    return this.httpClient.post(url, postData, { headers: headers, withCredentials: true} );
   }
+
 
 }

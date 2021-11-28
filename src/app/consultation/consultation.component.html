@@ -1,19 +1,33 @@
-<form>
+<h5 class="card-title">Konsultasjon</h5>
+<div class="col-sm-10 input-group mb-3 form-control-sm">
+    <select class="form-select form-control-sm" aria-label="Default select example">
+        <option selected>Velg funksjon</option>
+        <option value="1">Undersøkelse</option>
+        <option value="2">e-konsultasjon</option>
+        <option value="3">Hjemmesykepleie</option>
+        <option value="4">Saksbehandling</option>
+    </select>
+    <button class="btn btn-outline-secondary btn-sm form-control-sm" type="button" id="button-addon2">Legg til</button>
+</div>
+<a href="#" class="card-link">Avslutt konsultasjon</a>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
     <h3>Journalnotat</h3>
 
     <label for="note" class="form-label">Blodtrykk</label>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Systolisk" aria-label="Username">
+        <input type="text" class="form-control" placeholder="Systolisk" aria-label="systolic" id="bp_systolic" name="bp_systolic" [(ngModel)]="consultationNote.bp_systolic">
         <span class="input-group-text">/</span>
-        <input type="text" class="form-control" placeholder="Diastolisk" aria-label="Server">
+        <input type="text" class="form-control" placeholder="Diastolisk" aria-label="diastolic" id ="bp_diastolic" name="bp_diastolic" [(ngModel)]="consultationNote.bp_diastolic">
     </div>
     <div class="mb-3">
-        <label for="note" class="form-label">Journal for konsultasjon 26.11.2011</label>
-        <textarea class="form-control" id="note" rows="7"></textarea>
+        <label for="note" class="form-label">Tekstnotat for konsultasjon</label >
+        <textarea class="form-control" id="note" rows="7" id ="text_note" name="text_note" [(ngModel)]="consultationNote.text_note" ></textarea>
     </div>
-    <label for="note" class="form-label">Diagnose</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-    <datalist id="datalistOptions">
+
+    <label for="diagnosis" class="form-label">Diagnose</label>
+    <input class="form-control" list="diagnosis_list" id="diagnosis" placeholder="Type to search..." name="diagnosis" [(ngModel)]="consultationNote.diagnosis">
+    <datalist id="diagnosis_list" >
         <option value="A01,Smerte generell/flere steder,Smerte generell/flere steder"></option>
         <option value="A02,Frysninger,Frysninger"></option>
         <option value="A03,Feber,Feber"></option>
@@ -29,19 +43,22 @@
         <option value="A16,Irritabelt/urolig spedbarn,Irritabelt/urolig spedbarn"></option>
         <option value="A18,Bekymret/opptatt av utseende IKA,Bekymret/opptatt av utseende IKA"></option>
     </datalist>
-    <!--<label for="note" class="form-label">Inkluder dokumenter</label>
-    <select class="form-select" multiple aria-label="multiple select example">
-        <option value="1">Operasjonsbeskrivelse</option>
-        <option value="2">Henvisning</option>
-        <option value="3">Epikrise</option>
-    </select>-->
+
+    <label for="procedure" class="form-label">Prosedyre</label>
+    <input class="form-control" list="procedure_list" id="diagnosis" placeholder="Type to search..." name="procedure" [(ngModel)]="consultationNote.procedure">
+    <datalist id="procedure_list" >
+        <option value="Talk"></option>
+        <option value="Something"></option>
+        <option value="Nothing"></option>
+    </datalist>
+
     <label for="note" class="form-label">Videre oppfølging</label>
     <div class="mb-3">
         <select class="form-select" aria-label="Default select example">
-        <option value="0">Ingen</option>
-        <option value="1">Fastlege</option>
-        <option value="2">Ny time her</option>
-        <option value="3">Henvisning</option>
+            <option value="0">Ingen</option>
+            <option value="1">Fastlege</option>
+            <option value="2">Ny time her</option>
+            <option value="3">Henvisning</option>
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Lagre</button>
