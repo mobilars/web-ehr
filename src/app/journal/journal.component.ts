@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenehrService } from '../openehr.service';
 
-import { Labdata } from '../../labdata';
+import { JournalData } from '../../journaldata';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class JournalComponent implements OnInit {
 
   constructor(private ehrService: OpenehrService) { }
    
-  labData:Labdata = {
+  journalData:JournalData = {
     q: "",
     columns: [{}],
     rows: [] 
@@ -26,8 +26,8 @@ export class JournalComponent implements OnInit {
       this.ehr = data;
     })
 
-    this.ehrService.getLabData().subscribe((data: {}) => {
-      this.labData = <Labdata>data;
+    this.ehrService.getJournalData().subscribe((data: {}) => {
+      this.journalData = <JournalData>data;
     })
   }
 }
