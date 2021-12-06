@@ -3,9 +3,9 @@
         <thead>
           <tr class="bg-dark text-white align-top">
             <td>
-                <h5 class="card-title">Lars Kristian Roland <i class="fas fa-edit"></i></h5>
-                <h6 class="card-text"><i class="fas fa-sm fa-birthday-cake"></i> 02/03/73</h6>
-                <h6 class="card-text"><i class="fas fa-sm fa-house-user"></i> Nordengveien 85F, 0755 Oslo <i class="fas fa-sm fa-phone-square"></i> 90733036</h6>
+                <h5 class="card-title">Tine Tester <i class="fas fa-edit"></i></h5>
+                <h6 class="card-text"><i class="fas fa-sm fa-birthday-cake"></i> 02/03/53</h6>
+                <h6 class="card-text"><i class="fas fa-sm fa-house-user"></i> Nordveien 85, 0755 Oslo <i class="fas fa-sm fa-phone-square"></i> 99999999</h6>
                 <span class="badge rounded-pill bg-danger">Kritisk info: Cave Penicilin</span>
             </td>
             <td>
@@ -44,17 +44,17 @@
                                 </li>-->
                                 <li class="nav-item">
                                     &nbsp;
-                                    <button type="button" class="btn btn-dark btn-sm" (click)="startFirstApp()">Oversikt</button>&nbsp;
-                                    <button type="button" class="btn btn-dark btn-sm">Sak</button>&nbsp;   
-                                    <button type="button" class="btn btn-dark btn-sm" (click)="startThirdApp()">Journal</button>&nbsp;
-                                    <button type="button" class="btn btn-dark btn-sm">Diagnoser</button>&nbsp; 
-                                    <button type="button" class="btn btn-dark btn-sm">Tiltak</button>&nbsp;   
-                                    <button type="button" class="btn btn-danger btn-sm">Kjernejournal</button>&nbsp;   
-                                    <button type="button" class="btn btn-dark btn-sm">Legemidler</button>&nbsp;   
-                                    <button type="button" class="btn btn-dark btn-sm" (click)="startSecondApp()">Labsvar &nbsp;<i class="fas fa-sm fa-exclamation-circle"></i></button>&nbsp;
-                                    <button type="button" class="btn btn-dark btn-sm" (click)="startFourthApp()">Henvisning</button>&nbsp;  
-                                    <button type="button" class="btn btn-dark btn-sm">Rekvisisjon</button>&nbsp;  
-                                    <button type="button" class="btn btn-dark btn-sm">Timebok</button>&nbsp;&nbsp;                    
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('dashboard')">Oversikt</button>&nbsp;
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('saksbehandling')">Sak</button>&nbsp;   
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('journal')">Journal</button>&nbsp;
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('actions')">Tiltak</button>&nbsp;   
+                                    <button type="button" class="btn btn-danger btn-sm" (click)="startApp('kj')">Kjernejournal</button>&nbsp;   
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('medication')">Legemidler</button>&nbsp;   
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('lab')">Labsvar &nbsp;<i class="fas fa-sm fa-exclamation-circle"></i></button>&nbsp;
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('referal')">Henvisning</button>&nbsp;  
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('requisition')">Rekvisisjon</button>&nbsp;  
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('calendar')">Timebok</button>&nbsp;&nbsp;       
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('growth')">Vekstkurve</button>&nbsp;&nbsp;                
                                 </li>       
                                 <li class="nav-item dropdown">
                                     <a class="btn btn-dark btn-sm" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,10 +74,17 @@
                 </div>
     
                 <div class="p-10">
-                    <iframe [hidden]="!showWindowOne" [src]="appUrl1 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
-                    <iframe [hidden]="!showWindowTwo" [src]="appUrl2 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
-                    <iframe [hidden]="!showWindowThree" [src]="appUrl3 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
-                    <iframe [hidden]="!showWindowFour" [src]="appUrl4 | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('dashboard')" [src]="getAppUrl('dashboard') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('saksbehandling')" [src]="getAppUrl('saksbehandling') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('journal')" [src]="getAppUrl('journal') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('actions')" [src]="getAppUrl('actions') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('kj')" [src]="getAppUrl('kj') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('medication')" [src]="getAppUrl('medication') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('lab')" [src]="getAppUrl('lab') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('referal')" [src]="getAppUrl('referal') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('requisition')" [src]="getAppUrl('requisition') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('calendar')" [src]="getAppUrl('calendar') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('growth')" [src]="getAppUrl('growth') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                 </div>
             </td>
           </tr>

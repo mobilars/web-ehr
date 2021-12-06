@@ -11,6 +11,14 @@ import { SafePipe } from './safe.pipe';
 import { LabComponent } from './lab/lab.component';
 import { ConsultationComponent } from './consultation/consultation.component';
 import { JournalComponent } from './journal/journal.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SaksbehandlingComponent } from './saksbehandling/saksbehandling.component';
+import { ActionsComponent } from './actions/actions.component';
+import { MedicationComponent } from './medication/medication.component';
+import { ReferalComponent } from './referal/referal.component';
+import { RequisitionComponent } from './requisition/requisition.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { KJComponent } from './kj/kj.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +27,15 @@ import { JournalComponent } from './journal/journal.component';
     SafePipe,
     LabComponent,
     ConsultationComponent,
-    JournalComponent
+    JournalComponent,
+    DashboardComponent,
+    SaksbehandlingComponent,
+    ActionsComponent,
+    MedicationComponent,
+    ReferalComponent,
+    RequisitionComponent,
+    CalendarComponent,
+    KJComponent
   ],
   imports: [
     BrowserModule,
