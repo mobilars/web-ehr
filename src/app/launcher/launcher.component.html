@@ -50,9 +50,9 @@
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('actions')">Tiltak</button>&nbsp;   
                                     <button type="button" class="btn btn-danger btn-sm" (click)="startApp('kj')">Kjernejournal</button>&nbsp;   
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('medication')">Legemidler</button>&nbsp;   
+                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('requisition')">Rekvisisjon</button>&nbsp;  
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('lab')">Labsvar &nbsp;<i class="fas fa-sm fa-exclamation-circle"></i></button>&nbsp;
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('referal')">Henvisning</button>&nbsp;  
-                                    <button type="button" class="btn btn-dark btn-sm" (click)="startApp('requisition')">Rekvisisjon</button>&nbsp;  
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('calendar')">Timebok</button>&nbsp;&nbsp;       
                                     <button type="button" class="btn btn-dark btn-sm" (click)="startApp('growth')">Vekstkurve</button>&nbsp;&nbsp;                
                                 </li>       
@@ -80,9 +80,9 @@
                     <iframe [hidden]="!getShowWindow('actions')" [src]="getAppUrl('actions') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('kj')" [src]="getAppUrl('kj') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('medication')" [src]="getAppUrl('medication') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
+                    <iframe [hidden]="!getShowWindow('requisition')" [src]="getAppUrl('requisition') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('lab')" [src]="getAppUrl('lab') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('referal')" [src]="getAppUrl('referal') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
-                    <iframe [hidden]="!getShowWindow('requisition')" [src]="getAppUrl('requisition') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('calendar')" [src]="getAppUrl('calendar') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                     <iframe [hidden]="!getShowWindow('growth')" [src]="getAppUrl('growth') | safe: 'resourceUrl'" width="100%" height="800" title="SMART app"></iframe>
                 </div>
