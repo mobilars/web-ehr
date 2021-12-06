@@ -12,10 +12,10 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class OpenehrService {
 
-  ehrId = "03cfc5f7-f777-4ebe-9852-9ca99f04f9d0";
-  private ehrApiUrl = "http://localhost/ehrbase/rest/openehr/v1/ehr/";
-  private aqlApiUrl = "http://localhost/ehrbase/rest/openehr/v1/query/aql";
-  private postConsultationNoteUrl = "http://localhost/ehrbase/rest/ecis/v1/composition/?format=FLAT";
+  ehrId = "4a32b83a-c132-48f5-981c-86d1b50dd43e";
+  private ehrApiUrl = "/ehrbase/rest/openehr/v1/ehr/";
+  private aqlApiUrl = "/ehrbase/rest/openehr/v1/query/aql";
+  private postConsultationNoteUrl = "/ehrbase/rest/ecis/v1/composition/?format=FLAT";
 
   constructor(private httpClient: HttpClient) { }
 
