@@ -1,0 +1,1463 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:doc10="http://www.kith.no/xmlstds/henvisning/2005-07-08" xmlns:doc11="http://www.kith.no/xmlstds/henvisning/2012-02-15">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Henvisning</title>
+      <style type="text/css"><!--*/-->  
+
+
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700'); */
+
+@media screen {
+	
+	.Top {
+	width:95%;
+	margin: 1px;
+	/**border:1px solid gray;
+	background-color: #eeeeee;*/
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+
+	.No-line-top {
+	width:95%;
+	margin: 1px;
+	padding:1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+	
+	.Header {
+	width: 100%;
+	/*border:1px solid black;*/
+	overflow: visible;
+	padding: 1px;
+	}
+	
+	.No-line-header {
+	width: 100%;
+	overflow: visible;
+	padding: 1px;
+	}
+
+	.No-line-header.Patient {
+		width: 33%;
+	}
+
+	.No-line-header.Sender {
+		width: 67%;
+	}
+	
+	.HeaderContent {
+	width: 100%;
+	padding: 1px;
+	}
+	
+	.No-line-headerContent {
+	width: 100%;
+	padding: 1px;
+	line-height: 20px;
+	}
+	
+	.Caption {
+	width: 100px;
+	padding:1px;
+	margin-right: 2px;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	}
+	.Document .Caption {
+		background-color: #CAE8EA;
+	}
+	
+	.No-line-caption {
+	width: 150px;
+	padding: 1px;
+	margin-right: 2px;
+	clear: both;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	}
+
+	.Patient .No-line-caption {
+		width: 110px;
+	}
+
+	.Sender .No-line-caption {
+		width: 85px;
+	}
+
+	.No-line-caption.servprov {
+		padding-top: 4px;
+	}
+	
+	.Content, .No-line-content {
+	padding:1px;
+	background-color:  white;
+	margin-right: 1px;
+	}
+	.No-line-content {
+	display: inline-block;
+	}
+	.inline-content div {
+	display: inline;
+	}
+
+	.Content div, .No-line-content div {
+	display:inline;
+	}
+	
+	.NoScreen {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: none;
+	}
+	.VisSkjul {
+	margin-left: 5px;
+	color: blue;
+	cursor: pointer;
+	}
+
+	.VisSkjul:after {
+	content:"\A";
+	white-space: pre;
+	}
+	.Document h1 {
+		color:white;
+		background-color:gray;
+	}
+	.Document h2 {
+		color:white;
+		background-color:gray;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.No-line-doc  .summary h2,
+	.One-line-doc  .summary h2 {
+		background-color:#e3e3e3;
+	}
+	.No-line-doc .summary table,
+	.One-line-doc .summary table {
+		background-color: #e3e3e3;
+	}
+	.Document .summary h2 {
+		background-color: #ecece7;
+	}
+	.Document .summary table{
+		background-color: #ecece7;
+	}
+	.Document .summary {
+		box-shadow: 1px 1px 8px 1px #6d6a60;
+	}
+}
+
+@media print {
+
+	.Top, .No-line-top {
+	margin: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: visible;
+	}
+
+	.HeaderContent, .No-line-headerContent {
+	width: 47.5%;
+	height: 82px;
+	min-height: 82px;
+	max-height: 82px;
+	border: solid black 1px;
+	padding: 0.5em;
+	float: left;
+	overflow: hidden;
+	}
+	
+	.Caption, .No-line-caption {
+	float: left;
+	display:inline;
+	font-weight: bold;
+	}
+	
+	.NoPrint {
+	display: none;
+	}
+	
+	input:checked+table {
+	display: block;
+	}
+
+	.VisSkjul {
+	display: none;
+	}
+	.Document h1 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document h2 {
+		color: #000;
+		background-color: #fff;
+	}
+	.Document .summary h2 {
+		background-color: #fff;
+	}
+	.Document .summary {
+		background-color: #ffffff;
+	}
+	.Document .summary,
+	.One-line-doc .summary,
+	.No-line-doc .summary {
+		border: 1px solid #6d6a60;
+	}
+
+}
+
+div {
+	min-height: 12px;
+}
+
+.Document {
+width:95%;
+clear:left;
+margin: 1px;
+border:1px solid gray;
+padding:1em;
+background-color: #eeeeee;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.No-line-doc, .One-line-doc {
+width:95%;
+clear:left;
+margin: 1px;
+padding:1em;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+.Document h1 {
+padding:0.3em;
+border:1px solid gray;
+font-size: 1.8em;
+margin-bottom:0.3em;
+margin-top:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h1, .One-line-doc h1 {
+padding:0.1em;
+font-size: 1.8em;
+line-height:0.7em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document h2 {
+padding:0.4em;
+border:1px solid gray;
+font-size: 1.4em;
+line-height:0.7em;
+margin-bottom:0.3em;
+margin-top:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h2, .One-line-doc h2 {
+padding:0.1em;
+font-size: 1.4em;
+line-height:1em;
+margin-top:1em;
+margin-bottom:0em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.summary h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	border: none;
+}
+.Document .summary {
+	margin: 10px;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2,
+.Document .summary h2	{
+	padding-top:1em; 
+	padding-left:1em; 
+	margin-left:0em;
+}
+.No-line-doc  .summary h2,
+.One-line-doc  .summary h2 {
+	margin-top:0em; 
+}
+.Document .summary h2 {
+	color: #000;
+}
+.Document .summary table{
+	border: none;
+}
+.No-line-doc  .summary td,
+.One-line-doc  .summary td,
+.Document   .summary td {
+	background-color: inherit; 
+}
+.Document h3 {
+padding:0.2em;
+color:black;
+font-size: 1.2em;
+line-height:0.1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.No-line-doc h3, .One-line-doc h3 {
+padding:0.2em;
+font-size: 1.3em;
+line-height:1em;
+margin-bottom:0.3em;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.Document table {
+border:1px solid black;
+width:100%;
+}
+
+.No-line-doc table, .One-line-doc table {
+width:100%;
+}
+
+.Document th {
+background-color: #CAE8EA;
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: normal;
+padding-right: 5px;
+}
+
+.One-line-doc th {
+border-top: 1px solid lightgrey; 
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 5px 4px 2px;
+font-weight: bold;
+/* color: #826b35; */
+}
+
+.No-line-doc th {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
+text-align: left;
+vertical-align: top;
+width: 100px;
+font-weight: bold;
+padding-right: 5px;
+/* color: #826b35; */
+}
+
+.Document td {
+background-color: white;
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.No-line-doc tr.striped {
+	background-color: #f3f3f3;
+}
+
+.One-line-doc td {
+border-top: 1px solid lightgrey;
+background-color: white;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc td {
+border-style: none;
+text-align: left;
+vertical-align: top;
+font-size: 13px;
+}
+
+.Document th.h2 {
+color:white;
+background-color: gray;
+border:1px solid gray;
+font-size: 1em;
+line-height:0.9em;
+width: 100px;
+}
+
+.One-line-doc th.h2 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h2 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.3em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+.Document th.h3 {
+background-color: gray;
+color:white;
+}
+
+.One-line-doc th.h3 {
+border-top: 1px solid lightgrey;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+padding: 4px 2px 4px 2px;
+}
+
+.No-line-doc th.h3 {
+border-style:none;
+font-family: Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-align: left;
+vertical-align: top;
+width: 100px;
+}
+
+td.Emphasized {
+background-color:#CAE8EA;
+width: 100px;
+}
+.strong {
+	font-weight: 600;
+}
+.viktig {
+color: red;
+}
+.horRuler hr {
+	border: 1px dotted #d6d6d6;
+}
+.Box {
+border:1px solid black;
+padding:1px;
+overflow: hidden;
+line-height: 24px;
+}
+.Document .Box {
+background-color: #fff;
+}
+	
+.MainCaption {
+padding:1px;
+margin: 1px;
+display: inline;
+font-weight: bold;
+font-size: 12px;
+}
+.Document .MainCaption {
+	background-color: #CAE8EA;
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 5px;
+	margin-right: 0;
+}
+.MainContent {
+padding:1px;
+padding-right:5px;
+background-color:  white;
+margin: 1px;
+display: inline;
+font-size: 12px;
+}
+.Document .MainContent {
+	margin-left: 0;
+}
+
+.Block {
+float: left;
+width: 32%;
+}
+.Document .Block {
+	border: 2px solid #eeeeee;
+}
+.Box .Block:last-child {
+	float: none;
+	overflow: hidden;
+	width: auto;
+}
+
+#FellesMeny ul { 
+margin: 0;
+padding: 0; 
+list-style-type: none; 
+list-style-image: none;
+font-size: 1.03em;
+}
+
+#FellesMeny li { 
+display:inline;
+}
+
+#FellesMeny a {
+text-decoration:none;
+color: blue;
+white-space:nowrap;
+padding-right:1em;
+width:15em;
+}
+
+#FellesMeny a:hover {
+color: purple;
+}
+
+@media print {
+	.Document th.h3 {
+		color: #000;
+		font-weight: 600;
+	}
+}
+
+p.TestMessageWarning {
+	background-color: #fff3cd;
+	color: #856404;
+	padding: 1rem;
+	font-size: x-large;
+	border: 3px solid #ffeeba;
+	border-radius: .5rem
+}
+
+<!--/*--></style>
+      <style type="text/css"><!--*/-->  
+
+
+	.dummy { /* first css class is sometimes ignored, therefore need a dummy at first */
+	}
+
+	.clear {
+		clear: both;
+	}
+	[class^=eh-row-] [class^=eh-col-] {
+		min-width: 60px;
+		line-height: 20px; 
+		white-space: normal;
+		padding-left: 2px;
+		padding-right: 2px;
+		padding-bottom: 1002px;
+		margin-bottom: -1000px;
+	}
+	[class^=eh-row-] [class^=eh-col-] .eh-field,
+	[class^=eh-row-] [class^=eh-col-] .eh-label ,
+	[class^=eh-row-] [class^=eh-col-].eh-field,
+	[class^=eh-row-] [class^=eh-col-].eh-label {
+		vertical-align: text-top;
+		word-wrap: break-word;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	.eh-row-4 .eh-col-1 {
+		width: 25%;
+	}
+	.eh-row-4 .eh-col-2 {
+		width: 50%;
+	}
+	.eh-row-4 .eh-col-3 {
+		width: 75%;
+	}
+	.eh-row-4 .eh-col-4 {
+		width: 100%;
+	}
+	.eh-row-5 .eh-col-1 {
+		width: 20%;
+	}
+	.eh-row-5 .eh-col-2 {
+		width: 40%;
+	}
+	.eh-row-5 .eh-col-3 {
+		width: 60%;
+	}
+	.eh-row-5 .eh-col-4 {
+		width: 80%;
+	}
+	.eh-row-5 .eh-col-5 {
+		width: 100%;
+	}
+	.eh-row-8 .eh-col-1 {
+		width: 11.7%;
+	}
+	.eh-row-8 .eh-col-1.cs {
+		width: 10.2%;
+	}
+	.eh-row-8 .eh-col-1-xs {
+		width: 6.5%;
+	}
+	.eh-row-8 .eh-col-1-md {
+		width: 9.5%;
+	}
+	.eh-row-8 .eh-col-2-xs {
+		width: 16.5%;
+	}
+	.eh-row-8 .eh-col-2 {
+		width: 23.5%;
+	}
+	.eh-row-8 .eh-col-3 {
+		width: 35.0%;
+	}
+	.eh-row-8 .eh-col-4 {
+		width: 47.4%;
+	}
+	.eh-row-8 .eh-col-5 {
+		width: 59.5%;
+	}
+	.eh-row-8 .eh-col-6 {
+		width: 71.7%;
+	}
+	.eh-row-8 .eh-col-7 {
+		width: 84.0%;
+	}
+	.eh-row-8 .eh-col-8 {
+		width: 96.4%;
+	}
+	.eh-row-4 [class^=eh-col-] .eh-label,
+	.eh-row-5 [class^=eh-col-] .eh-label {
+		padding-right: 2px;
+	}
+	.eh-row-4 [class^=eh-col-] .eh-field,
+	.eh-row-5 [class^=eh-col-] .eh-field {
+		padding-left: 2px;
+	}
+	.eh-strong {
+		font-weight: 600;
+		color: #25240a;
+	}
+	[class^=eh-row-] [class^=eh-col-].h3 {
+		font-size:1.2em;
+		background-color: #fff;
+		font-weight: bold;
+	}
+	[class^=eh-row-] [class^=eh-col-].h4.eh-label {
+		font-weight: 600;
+	}
+	[class^=eh-row-] [class^=eh-col-].h3.eh-label {
+		color: #000;
+	}
+	[class^=eh-row-] {
+		white-space: nowrap;
+		overflow: hidden; /* clear the float */
+		position: relative;
+	}
+
+	[class^=eh-row-] [class^=eh-col-] {
+		float: left;
+		margin-left: 2px;
+		margin-right: 2px;
+		word-wrap: break-word; /* IE fix : must set on parent instead of .eh-field */
+	}
+	[class^=eh-row-] [class^=eh-col-].eh-last-child  {
+		display: block;
+		width: auto;
+		float:none;
+		overflow: hidden;		
+	}
+	[class^=eh-row-] [class^=eh-col-]:last-child {
+		display: block;
+		width: auto;
+		float:none;
+		overflow: hidden;
+	}
+	[class^=eh-row-] [class^=eh-col-] .eh-label.xs {
+		display: none;
+	}
+	.No-line-doc .eh-row-8.sepline {
+		height: 1px;
+		min-height: 0;
+		margin: 1px 0;
+	}
+	.One-line-doc .eh-row-8.sepline,
+	.Document .eh-row-8.sepline	{
+		display: none;
+	}
+	.One-line-doc [class^=eh-row-] {
+		line-height: 22px;
+		border-top: 1px solid lightgrey;
+	}
+	.No-line-doc  h2,
+	.One-line-doc  h2 {
+		padding: 0.3em;
+	}
+	[class^=eh-col-].eh-label,
+	[class^=eh-col-] .eh-label {
+		font-size: 14px;
+		/* font-family: 'Montserrat', Verdana, Helvetica, sans-serif; */
+	}
+	[class^=eh-col-].eh-field,
+	[class^=eh-col-] .eh-field	{
+		font-size: 14px;
+	}
+	.No-line-doc [class^=eh-col-].eh-label,
+	.No-line-doc [class^=eh-col-] .eh-label,	
+	.One-line-doc [class^=eh-col-].eh-label,
+	.One-line-doc [class^=eh-col-] .eh-label	{
+		font-weight: bold;
+		/* color: #826b35; */
+	}
+	.Document [class^=eh-col-].eh-label, 
+	.Document [class^=eh-col-] .eh-label {
+		background-color: #CAE8EA;
+	}
+	.Document [class^=eh-col-].eh-label.h3 {
+		background-color: gray;
+		color: white;
+	}
+	.Document [class^=eh-col-].eh-label,
+	.Document [class^=eh-col-].eh-field,
+	.eh-row-8 [class^=eh-col-].eh-label,
+	.eh-row-8 [class^=eh-col-].eh-field {
+		display: block;
+	}
+	.eh-row-8 [class^=eh-col-] .eh-label,
+	.eh-row-8 [class^=eh-col-] .eh-field {
+		display: block;
+		padding-bottom: 1002px;
+		margin-bottom: -1000px;
+	}
+	.Document .eh-row-4 [class^=eh-col-] .eh-label,
+	.Document .eh-row-5 [class^=eh-col-] .eh-label,
+	.Document .eh-row-4 [class^=eh-col-] .eh-field,
+	.Document  .eh-row-5 [class^=eh-col-] .eh-field {
+		display: block;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.Document [class^=eh-col-] {
+		background-color: white;
+		margin-top: 2px;
+	}
+	.Document .eh-row-4 [class^=eh-col-],
+	.Document .eh-row-5 [class^=eh-col-]	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.Document [class^=eh-col-].DocRow {
+		border-top: 2px solid #eeeeee;
+		margin-top: 0;
+	}
+	.Document [class^=eh-row-]:last-child {
+		margin-bottom: 4px;
+	}
+	.Document [class^=eh-row-].eh-last-child {
+		margin-bottom: 4px;
+	}
+	.Document .summary [class^=eh-row-]:last-child {
+		margin-bottom: 0;
+	}
+	.Document .summary [class^=eh-row-].eh-last-child {
+		margin-bottom: 0;
+	}
+	.Document [class^=eh-section] {
+		border: 1px solid black;
+		background-color: #eeeeee;
+	}
+	.Document .summary [class^=eh-section] {
+		border: none;
+	}
+	.Document .summary .eh-label {
+		background-color: inherit;
+	}
+	.Document [class^=eh-row-] .eh-bottom {
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		background-color: white;
+	}
+	.VisSkjul {
+		float: right; 
+		margin-right: 5em; 
+		position: relative; 
+		bottom: 24px;
+		height: 0;
+	}
+	.Document .VisSkjul {
+		bottom: 30px;
+		color: #fbfdff;
+	}
+	@media screen {
+		input:not(:checked) + [class^=eh-section] {
+			display: none;
+		}
+		.No-line-doc  h2,
+		.One-line-doc  h2 {
+			/* background-color: #e6e6e1; */
+		}
+		.Document .eh-row-8.striped {
+			background-color: #f3f3f3;
+		}
+		.eh-row-8 [class^=eh-col-].striped {
+			background-color: #f3f3f3;
+		}
+		.Document .summary [class^=eh-section],
+		.Document .summary [class^=eh-section] [class^=eh-col-] {
+			background-color: #ecece7;
+		}
+		.No-line-doc .summary [class^=eh-section],
+		.One-line-doc .summary [class^=eh-section] {
+			background-color: #e3e3e3;
+		}
+	}
+	@media print {
+		.VisSkjul {
+			display: none;
+		}
+		.Document .summary [class^=eh-section],
+		.Document .summary [class^=eh-section] [class^=eh-col-] {
+			background-color: #fff;
+		}
+		.Document [class^=eh-col-].eh-label.h3 {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-] .eh-label {
+		display: inline-block;
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-] .eh-field {
+		display: inline;
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-].eh-last-child .eh-label {
+		width: 25%;
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-]:last-child .eh-label {
+		width: 25%;
+	}
+	.Document [class^=eh-row-].blk-cmt [class^=eh-col-]:last-child .eh-label {
+		padding-bottom: 200px;
+		margin-bottom: -198px;
+		margin-top: -2px;		
+	}
+	.Document [class^=eh-row-].blk-cmt [class^=eh-col-].eh-last-child .eh-label {
+		padding-bottom: 200px;
+		margin-bottom: -198px;
+		margin-top: -2px;
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-]:last-child .eh-field {
+		display: inline-block;
+		width: 69%;
+	}
+	[class^=eh-row-].blk-cmt [class^=eh-col-].eh-last-child .eh-field  {
+		display: inline-block;
+		width: 69%;
+	}
+	[class^=eh-row-] [class^=eh-col-] .eh-field.blk {
+		display: block;
+	}
+	@media screen and (max-width: 767px) {
+		.Document [class$=eh-section] .eh-row-4 [class^=eh-col-] .eh-label,
+		.Document [class$=eh-section] .eh-row-5 [class^=eh-col-] .eh-label,
+		.Document [class$=eh-section] .eh-row-4 [class^=eh-col-] .eh-field,
+		.Document  [class$=eh-section] .eh-row-5 [class^=eh-col-] .eh-field {
+			display: inline-block;
+		}
+		[class^=eh-row-].blk-cmt [class^=eh-col-] .eh-label {
+			display: inline;
+		}
+		[class^=eh-row-] [class^=eh-col-] .eh-field.blk {
+			display: inline;
+		}
+		.eh-row-8 [class^=eh-col-] .eh-label,
+		.eh-row-8 [class^=eh-col-] .eh-field {
+			display: inline;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		[class$=eh-section] [class^=eh-row-] [class^=eh-col-] {
+			width: auto;
+			float: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		[class$=eh-section] [class^=eh-row-] [class^=eh-col-] .eh-field,
+		[class^=eh-row-] [class^=eh-col-] .eh-label {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+		[class$=eh-section] [class^=eh-row-] [class^=eh-col-].md,
+		[class$=eh-section] [class^=eh-row-].md {
+			display: none;
+		}
+		[class$=eh-section] .eh-row-8 [class^=eh-col-] .eh-label.xs,
+		[class$=eh-section] .eh-row-4 [class^=eh-col-] .eh-label,
+		[class$=eh-section] .eh-row-5 [class^=eh-col-] .eh-label {
+			display: inline-block;
+			width: 25%;
+			vertical-align: top;
+			padding-right: 5px;
+		}
+		[class$=eh-section] .eh-row-8 [class^=eh-col-].eh-field  .eh-text,
+		[class$=eh-section] .eh-row-4 [class^=eh-col-] .eh-field,
+		[class$=eh-section] .eh-row-5 [class^=eh-col-] .eh-field {
+			display: inline-block;
+			width: 69%;
+		}
+		[class$=eh-section] [class^=eh-col-] .eh-label,
+		[class$=eh-section] [class^=eh-col-] .eh-field {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+		[class$=eh-section] [class^=eh-row-] [class^=eh-col-] .eh-field,
+		[class$=eh-section] [class^=eh-row-] [class^=eh-col-].eh-field .eh-text {
+			padding-left: 5px;
+		}
+		.Document [class$=eh-section] .eh-row-8 [class^=eh-col-].eh-field:nth-child(2) .eh-label.xs {
+			margin-top: 2px;
+		}
+		[class$=eh-section] .eh-row-8:first-child {
+			margin-top: 2px;
+			border-top: 1px solid lightgrey;
+		}
+		[class$=eh-section] .eh-row-8:not(:last-child) {
+			border-bottom: 1px solid lightgrey;
+		}
+		[class$=eh-section] .eh-row-8.DocRow {
+			border-bottom: none;
+		}
+		[class$=eh-section] .eh-row-8 [class^=eh-col-].DocRow {
+			display: none;
+		}
+	}
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-] {
+		width: auto;
+		float: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-] .eh-field,
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-] .eh-label {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-].md {
+		display: none;
+	}
+	.eh-section.xs .eh-row-8 [class^=eh-col-] .eh-label.xs {
+		vertical-align: top;
+	}
+	.eh-section.xs [class^=eh-col-] .eh-label.xs {
+		display: inline-block;
+		vertical-align: initial;
+	}
+	.eh-section.xs [class^=eh-col-].eh-field .xs {
+		display: inline-block;
+	}
+	.eh-section.xs [class^=eh-col-] .eh-label,
+	.eh-section.xs [class^=eh-col-] .eh-field {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	.Document .eh-section.xs .eh-row-4 [class^=eh-col-] .eh-label,
+	.Document .eh-section.xs .eh-row-5 [class^=eh-col-] .eh-label,
+	.Document .eh-section.xs .eh-row-4 [class^=eh-col-] .eh-field,
+	.Document .eh-section.xs .eh-row-5 [class^=eh-col-] .eh-field {
+		display: inline-block;
+	}
+	.Document .eh-section.xs .eh-row-8 [class^=eh-col-] .eh-label.hd {
+		display: block;
+		background-color: #CAE8EA;
+	}
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-] .eh-label {
+		padding-right: 5px;
+		width: 25%;
+		display: inline-block;
+	}
+	.eh-section.xs .eh-row-8 [class^=eh-col-].eh-field  .eh-text,
+	.eh-section.xs .eh-row-4 [class^=eh-col-] .eh-field,
+	.eh-section.xs .eh-row-5 [class^=eh-col-] .eh-field {
+			display: inline-block;
+			width: 69%;
+	}
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-] .eh-field,
+	.eh-section.xs [class^=eh-row-] [class^=eh-col-].eh-field .eh-text {
+		padding-left: 5px;
+	}
+	.Document .eh-section.xs .eh-row-8 [class^=eh-col-].eh-field:nth-child(2) .eh-label.xs {
+		margin-top: 2px;
+	}
+	.Document .eh-section.xs .eh-row-8:not(:first-child) {
+		border-bottom: 1px solid grey;
+		overflow: visible;
+	}
+	.eh-section.xs .eh-row-8:not(:first-child) {
+		border-bottom: 1px solid lightgrey;
+	}
+	.Document .eh-section.xs .eh-row-8.DocRow,
+	.eh-section.xs .eh-row-8.DocRow {
+		border-bottom: none;
+	}
+	.eh-section.xs .eh-row-8 [class^=eh-col-].DocRow {
+		display: none;
+	}
+
+	@media print {
+		[class^=eh-row-] [class^=eh-col-] {
+			padding-bottom: 2px;
+			margin-bottom: 0;
+		}
+	}
+
+
+<!--/*--></style>
+      <style type="text/css"><!--*/-->  
+
+
+.dummy { /* first css class is sometimes ignored, therefore need a dummy at first */
+}
+
+body.Document {
+	background-color: #fff;
+	border: none;
+}
+body.Document.Smooth {
+	border: none;
+	box-shadow: none;
+}
+.Smooth .No-line-header {
+	padding: 10px;
+	background-color: #fff;
+	width: initial;
+}
+.Document.Smooth {
+	border-color: #e8e8e8;
+	background-color: #fff;
+    box-shadow: 0px 0px 2px #6d6a60;
+}
+.Document.Smooth h1 {
+	color: #08111b;;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h2 {
+	color: #08111b;
+	background-color: #ecece7;
+	border-color: #d8d8d8;
+}
+.Document.Smooth h3 {
+	color: black;
+}
+.Document.Smooth table {
+	border-color: #d8d8d8;
+}
+.Document.Smooth th {
+	background-color: #efefef;
+}
+.Document.Smooth td {
+	background-color: white;
+}
+.Document.Smooth .summary td {
+	background-color: inherit;
+}
+.Document.Smooth th.h2 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth th.h3 {
+	color: #08111b;;
+	background-color: #ececec;
+}
+.Document.Smooth .Caption {
+	background-color: #ececec;
+}
+.Document.Smooth .MainCaption {
+	background-color: #ececec;
+	font-weight: normal;
+	font-size: 13px;
+}
+.Document.Smooth .MainContent {
+	font-size: 14px;
+}
+.Document.Smooth [class^=eh-col-].eh-label, 
+.Document.Smooth [class^=eh-col-] .eh-label {
+	background-color: #f7f6ef;
+	color: #826b35;
+}
+.Document.Smooth .summary .eh-label {
+	background-color: inherit;
+}
+.Document.Smooth [class^=eh-col-].eh-label.h3 {
+	color: #08111b;
+	background-color: #ecece7;
+}
+.Document.Smooth [class^=eh-section] {
+	border-color: #d8d8d8;
+	background-color: #fff;
+}
+.Document.Smooth .summary [class^=eh-section]  {
+	background-color: #ecece7;
+}
+.Document.Smooth .VisSkjul {
+	color: blue;
+}
+@media screen and (max-width: 767px) {
+	.Document.Smooth [class$=eh-section] .eh-row-8 [class^=eh-col-] .eh-label.hd {
+		background-color: #efefef;
+	}
+}
+@media print {
+	body.Document.Smooth {
+		background-color: #fff;
+		border: none;
+	}
+	.Smooth .No-line-header {
+		padding: 1px;
+	}
+	.Document.Smooth h1 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h2 {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth h3 {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.Document.Smooth .summary {
+		border: 1px solid #6d6a60;
+		background-color: #ffffff;
+	}
+	.Document.Smooth .summary h2 {
+		background-color: #fff;
+	}
+	.Document.Smooth .summary [class^=eh-section],
+	.Document.Smooth .summary [class^=eh-section] [class^=eh-col-] {
+		background-color: #fff;
+		border: none;
+		margin: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label.h3 {
+		background-color: #fff;
+		border: none;
+		color: #000;
+	}
+	.Document.Smooth [class^=eh-section] {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-label, 
+	.Document.Smooth [class^=eh-col-] .eh-label {
+		background-color: #f7f6ef;
+		color: #826b35;
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	.Document.Smooth [class^=eh-col-].eh-field, 
+	.Document.Smooth [class^=eh-col-] .eh-field {
+		font-size: 10px;
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+	
+</style>
+   </head>
+   <body>
+      <div class="No-line-top">
+         <div class="No-line-header">
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Avsender&nbsp;</div>
+               <div class="No-line-content">
+                  <div>August&nbsp;
+                     			September&nbsp;
+                     			</div>
+                  <div>Kattskinnet legesenter&nbsp;
+                     				</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Pasient&nbsp;</div>
+               <div class="No-line-content">
+                  <div>Line&nbsp;
+                     			Danser&nbsp;
+                     			<span class="strong">FNR:&nbsp;
+                        					</span>131169&nbsp;
+                     					00216&nbsp;
+                     				</div>Numedalsveien 52, 3602 Kongsberg
+                  		&nbsp;
+                  		
+                  <div><span class="strong">Telefon:</span>&nbsp;90094004&nbsp;</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="No-line-caption">Mottaker&nbsp;</div>
+               <div class="No-line-content">
+                  <div>St Olavs Hospital HF&nbsp;
+                     				</div>
+                  <div>
+                     <div class="NoPrint">-&nbsp;</div>Ortopedisk kirurgi&nbsp;(
+                     					90998&nbsp;)
+                     				</div>
+               </div>
+            </div>
+            <div class="No-line-headerContent">
+               <div class="NoScreen">&nbsp;</div>
+            </div>
+         </div>
+      </div>
+      <div class="Document Smooth">
+         <div class="NoPrint">
+            <div id="FellesMeny" class="FellesMeny">
+               <ul>
+                  <li><a href="#Diagnosis1">Diagnoser</a></li>
+                  <li><a href="#CAVE1">Kritisk informasjon</a></li>
+                  <li><a href="#PROB1">Aktuell problemstilling</a></li>
+                  <li><a href="#ResultItem1">Funn/undersøkelsesresultat</a></li>
+                  <li><a href="#Medication1">Legemiddelopplysninger</a></li>
+                  <li><a href="#FA1">Familie/sosialt</a></li>
+                  <li><a href="#PatientInformation1">Pasientopplysninger</a></li>
+                  <li><a href="#PatRelHCP1">Kontaktopplysninger</a></li>
+               </ul>
+            </div>
+         </div>
+         <h1>Henvisning ny tilstand</h1>
+         <div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Type henvisning</div>
+                  <div class="eh-field">Utredning/behandling</div>
+               </div>
+               <div class="eh-col-1">
+                  <div class="eh-label">Utstedt</div>
+                  <div class="eh-field">30.03.18 kl.09:15</div>
+               </div>
+            </div>
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Hastegrad</div>
+                  <div class="eh-field">Elektiv/Ordinær (elektiv)</div>
+               </div>
+            </div>
+            <div></div>
+         </div>
+         <h2 id="Diagnosis1">Diagnoser</h2>
+         <div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">L88&nbsp;
+                     					(ICPC)</div>
+                  <div class="eh-field">Reumatoid artritt/reumatisk sykdom</div>
+               </div>
+            </div>
+         </div>
+         <h2 id="CAVE1">Kritisk informasjon</h2>
+         <div class="eh-section">
+            <div class="eh-row-5">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Cave-opplysninger</div>
+                  <div class="eh-field">Registrert 13-03-04<br>							Får blodtrykksfall ved vepsestikk</div>
+               </div>
+            </div>
+         </div>
+         <h2 id="PROB1">Aktuell problemstilling</h2>
+         <div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-field"><textarea width="100%" rows="10" cols="100">
+Stadig dårligere denne vinteren, hevelse og rubor over en rekke ledd, betydelige smerter og stokk stiv, greier seg knapt nok selv lenger.Har økende smerter i hofter, men også tiltagende smerter i en rekke andre ledd, til tross for økning prednison opp til 30mg dgl i en uke fra 21.03.18. Henvises til ny vurdering og oppfølging av behandlingen. 
+eropos RA fra 2001-Myocrisinbeh tidl m god effekt, også brukt Ridaura. Fra 2012 Methotrexat 7,5mg ukentlig, sep pga hematuri og fra april 2016 Ercoquin 200mgx2.
+Vurdert v Reum.pol. St. Olavs 28.04.17 - fikk da endel leddinj DepoMedrol og red Ercoquin til 200mgx1. 
+På ny vurdert 18.08.17: Ercoquin seponert, på ny steroidinj i div ledd og eneste faste med. Prednisolon 7,5mg dgl.
+I sept tiltagende plager, fikk nytt "støt" med Prednisolon uten særlig effekt og 21.10.17 startet opp igjen med Ercoquin. Hun hadde da CRP 200 og SR økende til 85. Vedvarende plager, bortsett fra en kortere periode i januar 2018 med bedring både  klinisk og lab.messig.
+                    </textarea>
+                     <br></div>
+               </div>
+            </div>
+         </div>
+         <h2 id="ResultItem1">Funn/undersøkelsesresultat</h2>
+         <div class="eh-section">
+            <div class="eh-row-5">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Funn og undersøkelsesresultat</div>
+                  <div class="eh-field"><br><input length="40" value="Høyde: 178 cm"><br>
+                    <input value="Vekt:	85 kg"><br><br>
+                    Laboratorieverdier: 28/03/18 <br>HVITE:  			9200 <br>RØDE: 				3.87 <br>HB: 					12.3 <br>HCT: 				35.8 <br>MCV: 				92.5 <br>TROMBOCYT: 	222 <br>CRP: 				42 <br>SR : 				70 <br>ALAT: 				18 <br>KREAT: 			64 <br>GAMMA-GT: 	47 <br>URISTIX : 			b++ <br></div>
+               </div>
+            </div>
+         </div>
+         <h2 id="Medication1">Legemiddelopplysninger</h2>
+         <div class="eh-section">
+            <div class="eh-row-5">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Legemiddelopplysning</div>
+                  <div class="eh-field">Prednisolon, tablett 2,5mg og 20mg, 7,5mg dgl., økning til 30 mg dgl. i en uke fra
+                     21.03.18</div>
+               </div>
+            </div>
+            <div class="eh-row-5">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Legemiddelopplysning</div>
+                  <div class="eh-field">Paracet, tablett 500mg, 1-2 tabl. ved behov</div>
+               </div>
+            </div>
+         </div>
+         <h2 id="FA1">Familie/sosialt</h2>
+         <div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-field"><input length="100" value="Fraskilt, bor alene i eget hus. Mor bosatt i Narvik"> </div>
+               </div>
+            </div>
+         </div>
+         <h2 id="PatientInformation1">Pasientopplysninger</h2>
+         <div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Sivilstatus</div>
+                  <div class="eh-field">Ugift</div>
+               </div>
+            </div>
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Mor&nbsp;
+                     							</div>
+                  <div class="eh-field">
+                     <div>Mor&nbsp;
+                        			Telokk&nbsp;
+                        			</div><span class="eh-strong">Bostedsadresse:&nbsp;
+                        				</span>Lundegaardsbakken 13, 5020 Bergen
+                     		&nbsp;
+                     		</div>
+               </div>
+               <div class="eh-col-1">
+                  <div class="eh-label">Nærmeste pårørende</div>
+                  <div class="eh-field">Ja</div>
+               </div>
+            </div>
+            <div class="eh-row-4">
+               <div class="eh-col-4">
+                  <div class="eh-label">Assistert kommunikasjon</div>
+               </div>
+            </div>
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Gjelder&nbsp;for</div>
+                  <div class="eh-field">
+                     <div>Mor&nbsp;
+                        			Telokk&nbsp;
+                        			</div>
+                  </div>
+               </div>
+               <div class="eh-col-1">
+                  <div class="eh-label">Språk</div>
+                  <div class="eh-field">NORDSAMISK</div>
+               </div>
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Merknad</div>
+                  <div class="eh-field"><input length="100" value="Mor har behov for tolk hvis det er behov for informasjon til pårørende"></div>
+               </div>
+            </div>
+         </div>
+         <h2 id="PatRelHCP1">Kontaktopplysninger</h2><label for="visPatRelHCP1" class="VisSkjul">Vis/Skjul</label><input type="checkbox" checked="true" id="visPatRelHCP1" style="display: none;"><div class="eh-section">
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Tilknyttet helseperson</div>
+                  <div class="eh-field">
+                     <div>Lege&nbsp;
+                        			
+                        				og&nbsp;
+                        			Fastlege&nbsp;
+                        			August&nbsp;
+                        			September&nbsp;
+                        			</div><span class="italic">HPR-nummer:</span>&nbsp;
+                     			9144897</div>
+               </div>
+            </div>
+            <div class="eh-row-4">
+               <div class="eh-col-1">
+                  <div class="eh-label">Henvisende helsepersonell&nbsp;</div>
+                  <div class="eh-field">
+                     <div>Lege&nbsp;
+                        			
+                        				og&nbsp;
+                        			Turnuslege&nbsp;
+                        			May&nbsp;
+                        			Jones&nbsp;
+                        			</div><span class="italic">HPR-nummer:</span>&nbsp;
+                     			9144919
+                     <div><span class="strong">Telefon:</span>&nbsp;90550374&nbsp;</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Document Smooth">
+         <h2>Dokumentinformasjon</h2><label for="visFooter" class="VisSkjul">Vis/Skjul</label><input type="checkbox" checked="true" id="visFooter" style="display: none;"><div class="eh-section">
+            <div class="eh-row-5">
+               <div class="eh-col-2">
+                  <div class="eh-label">Melding opprettet</div>
+                  <div class="eh-field">30.03.18 kl.09:15</div>
+               </div>
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Meldingsid</div>
+                  <div class="eh-field">76665c90-3198-11e8-b566-0800200c9a66</div>
+               </div>
+            </div>
+            <div class="eh-row-5">
+               <div class="eh-col-2">
+                  <div class="eh-label">Visningsversjon</div>
+                  <div class="eh-field">henvisning v.uavhengig - v5.1.0</div>
+               </div>
+               <div class="eh-col-1 eh-last-child">
+                  <div class="eh-label">Visningsstil</div>
+                  <div class="eh-field">Document Smooth</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -45,7 +45,8 @@ export class LauncherComponent implements OnInit {
     {id: 5, name: 'kj', show: false, url:'/kj'},
     {id: 6, name: 'medication', show: false, url:'/medication'},
     {id: 7, name: 'lab', show: false, url:'/lab'},
-    {id: 8, name: 'referal', show: false, url:'/referal'},
+    //{id: 8, name: 'referal', show: false, url:'/referal'},
+    {id: 8, name: 'referal', show: false, url:'/assets/html/henvisning.html'},
     {id: 9, name: 'requisition', show: false, url:'/requisition'},
     {id: 10, name: 'calendar', show: false, url:'/calendar'},
     {id: 11, name: 'growth', show: false, url:'https://launch.smarthealthit.org/launcher?launch_uri=https%3A%2F%2Fexamples.smarthealthit.org%2Fgrowth-chart-app%2Flaunch.html&patient=smart-1482713%2Csmart-7777703%2Csmart-7777705%2Csmart-7777701%2Csmart-7777704%2Csmart-99912345%2Csmart-7777702&fhir_ver=2";//http://localhost:4300/launch?launch=eyJhIjoiMSIsImIiOiIxIiwiZSI6IjMiLCJmIjoiMSJ9&iss=http://localhost:4013/v/r4/fhir&redirectUri=/main'}
