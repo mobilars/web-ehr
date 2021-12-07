@@ -1,11 +1,15 @@
 <div>
-    <table class="table table-bordered">
-        <tr><th style="width: 10%;">Date</th><th style="width: 70%;">Tekstnotat</th><th style="width: 20%;">Blodtrykk</th></tr>
+    <table class="table table-hover">
+        <thead>
+            <tr><th style="width: 10%;">Date</th><th style="width: 70%;">Tekstnotat</th><th style="width: 20%;">Blodtrykk</th></tr>
+        </thead>
+        <tbody>
         <tr *ngFor="let i of journalData.rows">
             <td>{{i[0] | date }}</td>
             <td>{{i[1]}}</td>
             <td>{{i[2]}}/{{i[3]}}</td>
         </tr>
+        </tbody>
     </table>
 </div>
 <div>
